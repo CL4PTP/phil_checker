@@ -57,10 +57,13 @@ fn main()
                 let email = lettre_email::EmailBuilder::new()
                     .from("bence.me@gmail.com")
                     .to("bence.me@gmail.com")
+                    .cc("ghadeersammour@cmail.carleton.ca")
                     .subject("PHIL 2001 Notifier: Spot available")
                     .body(r#"There's a spot available in PHIL 2001.
 
-Go here to check yourself: https://central.carleton.ca/prod/bwysched.p_display_course?wsea_code=EXT&term_code=201820&disp=8184189&crn=21329"#)
+Go here to check yourself: https://central.carleton.ca/prod/bwysched.p_display_course?wsea_code=EXT&term_code=201820&disp=8184189&crn=21329
+
+Or this is wrong and you should tell me ¯\_(ツ)_/¯"#)
                     .build()
                     .expect("Failed to build email");
                 
@@ -75,9 +78,7 @@ Go here to check yourself: https://central.carleton.ca/prod/bwysched.p_display_c
         }
         // status_str.contains("Full") {}
 
-
         println!("{}: {}", chrono::Local::now().format("%Y-%m-%d %H:%M:%S"), status_str);
-
         std::thread::sleep(std::time::Duration::from_secs(10*30));
     }
 }
