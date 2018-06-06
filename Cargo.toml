@@ -1,0 +1,16 @@
+[package]
+name = "phil_check"
+version = "0.1.0"
+authors = ["Bence Meszaros <bence.me@gmail.com>"]
+
+[dependencies]
+reqwest = "0.8"
+scraper = "0.6"
+lettre = "0.8"
+lettre_email = "0.8"
+native-tls = "0.1"
+chrono = "0.4"
+# regex = "1.0"
+
+[profile.release]
+lto = true
