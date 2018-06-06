@@ -1,0 +1,15 @@
+{
+  "name": "phil_check",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^4.6.5",
+    "osmosis": "^1.1.6"
+  }
+}
